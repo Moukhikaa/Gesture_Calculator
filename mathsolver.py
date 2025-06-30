@@ -3,34 +3,31 @@ import mediapipe as mp
 import numpy as np
 import time
 
-# MediaPipe modules for hand detection
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.7,
                        min_tracking_confidence=0.7)
 
-# Function to calculate Euclidean distance between two hand landmarks
 def euclidean_distance(p1, p2):
     return np.sqrt((p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
 
-# Function to count number of fingers raised
 def count_fingers(hand_landmarks, label):
     tip_ids = [4, 8, 12, 16, 20]
     fingers = []
 
-    # Thumb logic
+   
     if label == "Left":
         fingers.append(1 if hand_landmarks.landmark[tip_ids[0]].x > hand_landmarks.landmark[tip_ids[0]-1].x else 0)
     else:
         fingers.append(1 if hand_landmarks.landmark[tip_ids[0]].x < hand_landmarks.landmark[tip_ids[0]-1].x else 0)
 
-    # Other four fingers
+    
     for i in range(1, 5):
         fingers.append(1 if hand_landmarks.landmark[tip_ids[i]].y < hand_landmarks.landmark[tip_ids[i]-2].y else 0)
 
     return fingers.count(1)
 
-# Function to detect gestures using two hands
+
 def detectGesture(hand1_data, hand2_data):
     (hand1, label1), (hand2, label2) = hand1_data, hand2_data
 
@@ -39,8 +36,6 @@ def detectGesture(hand1_data, hand2_data):
     f2 = count_fingers(hand2, label2)
     i1, i2 = hand1.landmark[8], hand2.landmark[8]
     t1, t2 = hand1.landmark[4], hand2.landmark[4]
-
-    # dist = euclidean_distance(hand1.landmark[8], hand2.landmark[8])
     
 
     def is_fist_and_palm(f1, f2):
@@ -48,7 +43,7 @@ def detectGesture(hand1_data, hand2_data):
 
     def is_l_shape(hand):
         lm = hand.landmark
-        thumb_up = lm[4].x < lm[3].x or lm[4].x > lm[3].x  # depends on left/right
+        thumb_up = lm[4].x < lm[3].x or lm[4].x > lm[3].x  
         index_up = lm[8].y < lm[6].y
         others_folded = all(
             lm[fid].y > lm[fid - 2].y for fid in [12, 16, 20]
@@ -71,7 +66,6 @@ def detectGesture(hand1_data, hand2_data):
 
     if is_thumbs_up(hand1, label1) or is_thumbs_up(hand2, label2):
         return "+"
-    
 
     
     def is_rock_sign(hand):
@@ -91,17 +85,11 @@ def detectGesture(hand1_data, hand2_data):
     if heart_index and heart_thumb:
         return "exit"
 
-    # elif (f1 == 1 and f2 == 2) or (f1 == 2 and f2 == 1):
-    #     return "-"
-    # elif (f1 == 1 and f2 == 3) or (f1 == 3 and f2 == 1):
-    #     return "*"
-        # ➗ Division: OK sign (thumb & index touch on both hands)
     thumb_index_close_1 = euclidean_distance(hand1.landmark[4], hand1.landmark[8]) < 0.04
     thumb_index_close_2 = euclidean_distance(hand2.landmark[4], hand2.landmark[8]) < 0.04
 
     if thumb_index_close_1 and thumb_index_close_2:
         return "/"
-    
     
     elif is_fist_and_palm(f1, f2):
         return "del"
@@ -120,12 +108,10 @@ def detectGesture(hand1_data, hand2_data):
         return "clear"
     return None
 
-# Initialize variables
 last_update_time = 0
 delay = 1.25
 expression = ""
 res = ""
-
  
 # Open webcam
 cap = cv.VideoCapture(0)
