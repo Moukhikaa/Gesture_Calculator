@@ -34,18 +34,18 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 
 ## 🖐️ Gesture Reference Guide
 
-| Action      | Gesture (Both Hands)                          | Description                        |
-|-------------|-----------------------------------------------|------------------------------------|
-| `0–5`       | Show 0–5 fingers                              | One hand                           |
-| `6–9`       | One hand (5 fingers) + Other (1–4 fingers)    | Count combined                     |
-| `+`         | 👍 Thumbs up                                  | Thumbs up on both hands            |
-| `-`         | 🤌 L-shape with thumbs meeting                | Index + Thumb "L", both hands      |
-| `×`         | 🤘 Rock sign                                  | Thumb + Pinky extended both hands  |
-| `/`         | 👌 OK sign                                    | Thumb touches index finger         |
-| `=`         | 👊👊 Both fists                                | 0 fingers on both hands           |
-| `clear`     | 🖐️🖐️ Both hands fully open                   | All 5 fingers up                   |
-| `exit`      | ❤️ Heart with Index + Thumb tips              | Fingers curved, thumbs/index meet  |
-| `del`       | ✊✋ One Fist + One Open Palm                   | 0 fingers + 5 fingers              |
+| Action      | Gesture                                       | Description                        | Meaning                         |
+|-------------|-----------------------------------------------|------------------------------------|---------------------------------|
+| `0–5`       | Show 0–5 fingers                              | One hand                           | Digit entry                     |
+| `6–9`       | One hand (5 fingers) + Other (1–4 fingers)    | Count combined                     | Digit entry                     |
+| `+`         | 👍 Thumbs up                                  | Thumbs up on both hands            | Addition                        |
+| `-`         | 🤌 L-shape with thumbs meeting                | Index + Thumb "L", both hands      | Subtraction                     |
+| `×`         | 🤘 Rock sign                                  | Thumb + Pinky extended both hands  | Multiplication                  |
+| `/`         | 👌 OK sign                                    | Thumb touches index finger both hands | Division                        |
+| `=`         | 👊👊 Both fists                                | 0 fingers on both hands            | Evaluate expression             |
+| `clear`     | 🖐️🖐️ Both hands fully open                   | All 5 fingers up both hands         | Clear input                     |
+| `exit`      | ❤️ Heart with Index + Thumb tips              | Fingers curved, thumbs/index meet  | Exit the application            |
+| `del`       | ✊✋ One Fist + One Open Palm                   | 0 fingers + 5 fingers             | Delete last input character     |
 
 ---
 
