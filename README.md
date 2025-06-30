@@ -49,3 +49,5 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 
 ---
 
+## Credits 💫
+
