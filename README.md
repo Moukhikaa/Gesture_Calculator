@@ -5,9 +5,6 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 
 ---
 
-## 📸 Demo
-![demo gif or image placeholder]
-
 ---
 
 ## 🧠 Features
@@ -50,4 +47,4 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 ---
 
 ## Credits 💫
-
+[Moukhika](https://www.linkedin.com/in/moukhika01/)
