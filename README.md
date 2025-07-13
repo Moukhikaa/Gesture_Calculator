@@ -46,6 +46,6 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 
 ---
 ## Live Demo 
-![video](
+![video](https://www.canva.com/design/DAGtEGGKshY/F3aEkr_Ils_t7he4wDbxzA/edit?utm_content=DAGtEGGKshY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 ## Credits 💫
 [Moukhika](https://www.linkedin.com/in/moukhika01/)
