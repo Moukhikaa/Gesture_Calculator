@@ -3,7 +3,7 @@
 Solve math problems **hands-free** using your webcam and hand gestures!  
 Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 
----
+Live Demo : [video](https://www.canva.com/design/DAGtEGGKshY/HRVT4YuXT8hLcC1QoHW0-A/watch?utm_content=DAGtEGGKshY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h700b8880b6)
 
 ---
 
@@ -45,7 +45,6 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 | `del`       | ✊✋ One Fist + One Open Palm                   | 0 fingers + 5 fingers             | Delete last input character     |
 
 ---
-## Live Demo 
-[video](https://www.canva.com/design/DAGtEGGKshY/HRVT4YuXT8hLcC1QoHW0-A/watch?utm_content=DAGtEGGKshY&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h700b8880b6)
+
 ## Credits 💫
 [Moukhika](https://www.linkedin.com/in/moukhika01/)
