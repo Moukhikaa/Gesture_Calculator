@@ -45,6 +45,7 @@ Built with `OpenCV`, `MediaPipe`, and Python magic. 🔢🤖
 | `del`       | ✊✋ One Fist + One Open Palm                   | 0 fingers + 5 fingers             | Delete last input character     |
 
 ---
-
+## Live Demo 
+![video](
 ## Credits 💫
 [Moukhika](https://www.linkedin.com/in/moukhika01/)
